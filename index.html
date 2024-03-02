@@ -12,10 +12,120 @@
     <!--Raw CSS style-->
     <link rel="stylesheet" href="style/style.css">
 
-</head>
-<body>
-    
+    <script src="https://kit.fontawesome.com/6c13a282a2.js" crossorigin="anonymous"></script>
 
+</head>
+<body class="mulish">
+    <header class="container mx-auto lg:pt-12 lg:px-32 p-4">
+        <!-- navbar section -->
+        <nav class="flex justify-between items-center flex-col lg:flex-row gap-6">
+            <div>
+                <h1 class="text-[rgb(18,19,45)] text-4xl font-black border-2 border-dashed border-[rgba(3,7,18,0.1)]">ReTro</h1>
+            </div>
+                
+            <div class="flex gap-6 flex-col lg:flex-row items-center justify-start">
+                <div class="flex gap-6 ">
+                    <button class="lg:w-14 lg:h-14 w-10 h-10 border border-[rgba(3,7,18,0.1)] rounded-full bg-[3,7,18,0.03]"><i class="fa-solid fa-house"></i></button>
+                    <button class="lg:w-14 lg:h-14 w-10 h-10 border border-[rgba(3,7,18,0.1)] rounded-full bg-[3,7,18,0.03]"><i class="fa-solid fa-pen"></i></button>
+                    <button class="lg:w-14 lg:h-14 w-10 h-10 border border-[rgba(3,7,18,0.1)] rounded-full bg-[3,7,18,0.03]"><i class="fa-solid fa-user-plus"></i></button>
+                    <button class="lg:w-14 lg:h-14 w-10 h-10 border border-[rgba(3,7,18,0.1)] rounded-full bg-[3,7,18,0.03]"><i class="fa-solid fa-font-awesome"></i></button>
+                </div>
+                <div>
+                    <button class="lg:px-10 lg:py-4 px-5 py-2 border border-[rgba(3,7,18,0.1)] bg-[rgb(121,125,252)] text-white font-bold rounded-[50px]">Sign In</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- banner section -->
+        <div class="banner mt-12">
+            <div class="lg:w-[1170px] mx-auto lg:h-[550px] bg-[rgb(18,19,45)] bg-[url(images/bgbanner.png)] bg-no-repeat rounded-3xl bg-bottom">
+                <div class="text-white flex justify-between items-center px-28 py-32">
+                    <div>
+                        <h1 class="font-black text-6xl">Welcome to the <br> <span class="text-[rgb(121,125,252)]">ReTro</span> Forum</h1>
+                        <p class="text-[rgba(255,255,255,0.8)] text-xl font-medium mt-5 mb-8">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
+                        <div class="bg-white w-[400px] flex p-1 rounded-[50px]">
+                            <input class="bg-transparent px-5 w-full outline-none text-[rgba(3,7,18,0.5)]" type="text" placeholder="Search here anything"> 
+                            <button class="bg-[rgb(121,125,252)] px-7 py-4 font-bold rounded-[46px]">Search</button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-3xl text-black w-96 h-72 p-12">
+                        <table class="w-full h-full text-2xl font-medium text-[rgba(18,19,45,0.8)]">
+                            <tr>
+                                <td>Registered Users</td>
+                                <td>01</td>
+                            </tr>
+                            <tr>
+                                <td>Forum</td>
+                                <td>05</td>
+                            </tr>
+                            <tr>
+                                <td>Topics</td>
+                                <td>01</td>
+                            </tr>
+                            <tr>
+                                <td>Replies</td>
+                                <td>01</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="container mx-auto lg:px-32 p-4 mt-24">
+        <section class="text-center">
+            <h1 class="text-4xl font-black text-[rgb(18,19,45)]">Let's Discuss</h1>
+            <p class="text-lg text-[rgba(18,19,45,0.6)]">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+        </section>
+        <section class="mt-12 flex gap-6">
+            <div class="bg-[rgb(243,243,245)] p-10 w-full h-[270px] flex gap-6 rounded-3xl border-2 border-[rgb(121,125,252)]">
+                <div class="w-[100px] h-[80px] rounded-2xl bg-black relative">
+                    <img src="" alt="">
+                    <p class="w-5 h-5 bg-[rgb(16,185,129)] rounded-full absolute -top-2 -right-2 border-2 border-white"></p>
+                </div>
+                <div>
+                    <div class="text-sm font-medium text-[rgba(18,19,45,0.8)] flex gap-5">
+                        <p># Music</p>
+                        <p>Author : Awlad Hossain</p>
+                    </div>
+                    <div class="my-4">
+                        <h1 class="text-xl font-bold">10 Kids Unaware of Their Halloween Costume</h1>
+                    </div>
+                    <div>
+                        <p class="text-base text-[rgba(18,19,45,0.6)]">It's one thing to subject yourself to ha Halloween costume mishap because, hey that's your prerogative</p>
+                    </div>
+                    <hr class="border border-dashed border-[rgba(18,19,45,0.25)] my-6">
+                    <div class="flex justify-between text-[rgba(18,19,45,0.6)]">
+                        <div class="flex gap-7">
+                            <p><span><i class="fa-regular fa-message"></i></span> <span>560</span></p>
+                            <p><span><i class="fa-regular fa-eye"></i></span> <span>1578</span></p>
+                            <p><i class="fa-regular fa-clock"></i></span> <span>5 min</span></p>
+                        </div>
+                        <div class="w-[28px] h-[28px] rounded-full bg-[rgb(16,185,129)] flex items-center justify-center">
+                            <i class="fa-solid fa-envelope text-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[374px] rounded-3xl bg-[rgba(18,19,45,0.05)] p-6">
+                <div class="flex items-center justify-between w-full mb-4">
+                    <h4 class="text-xl font-bold">Title</h4>
+                    <p class="text-[rgba(18,19,45,0.6)]">Mark as read (<span>4</span>)</p>
+                </div>
+                <div class="flex gap-4 flex-col">
+                    <div class="bg-white rounded-2xl w-[326px] h-[82px] flex justify-between items-center p-4 ">
+                        <p class="text-base font-semibold">10 Kids Unaware of Their <br> Halloween Costume</p>
+                        <p class="text-[rgba(18,19,45,0.6)]"><span><i class="fa-regular fa-eye"></i></span> <span>1578</span></p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <!-- script -->
     <script src="script/retro.js"></script>
