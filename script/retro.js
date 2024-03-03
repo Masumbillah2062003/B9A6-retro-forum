@@ -67,7 +67,7 @@ const messageButton = (title, view_count) => {
 
 
 
-discussSectionCard('comedy');
+discussSectionCard('');
 
 
 
