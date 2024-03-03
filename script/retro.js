@@ -101,11 +101,11 @@ const latestPost = async() => {
     data.forEach(item => {
         const div = document.createElement('div');
         div.innerHTML = `
-        <div class="border border-[rgba(18,19,45,0.15)] rounded-2xl w-[374px] p-6">
-        <figure class="w-[326px] h-[190px] rounded-2xl bg-black">
+        <div class="border border-[rgba(18,19,45,0.15)] rounded-2xl lg:w-[374px] lg:p-6 p-3">
+        <figure class="lg:w-[326px] lg:h-[190px] rounded-2xl bg-black">
             <img src="${item.cover_image}" alt="" class="rounded-2xl">
         </figure>
-        <p class="text-[rgba(18,19,45,0.6)] mt-[2.5rem]">
+        <p class="text-[rgba(18,19,45,0.6)] lg:mt-[2.5rem] mt-5">
             <span><i class="fa-regular fa-calendar-days"></i></span> ${item.author.posted_date ? item.author.posted_date : 'No publish date'}
         </p>
         <p class="text-lg font-extrabold mt-4 text-[rgb(18,19,45)]">
