@@ -64,3 +64,46 @@ const messageButton = (title, view_count) => {
 }
 
 discussSectionCard();
+
+
+const latestPost = async() => {
+    const res = await fetch("https://openapi.programming-hero.com/api/retro-forum/latest-posts");
+    const data = await res.json();
+
+    const latestPostCards = document.getElementById('latest-post-cards');
+    data.forEach(item => {
+        const div = document.createElement('div');
+        div.innerHTML = `
+        <div class="border border-[rgba(18,19,45,0.15)] rounded-2xl w-[374px] p-6">
+        <figure class="w-[326px] h-[190px] rounded-2xl bg-black">
+            <img src="${item.cover_image}" alt="" class="rounded-2xl">
+        </figure>
+        <p class="text-[rgba(18,19,45,0.6)] mt-[2.5rem]">
+            <span><i class="fa-regular fa-calendar-days"></i></span> ${item.author.posted_date ? item.author.posted_date : 'No publish date'}
+        </p>
+        <p class="text-lg font-extrabold mt-4 text-[rgb(18,19,45)]">
+            ${item.title}
+        </p>
+        <p class="text-[rgba(18,19,45,0.6)] mt-3">
+            ${item.description} 
+        </p>
+        <div class="mt-4 flex gap-5">
+            <figure class="w-11 h-11 rounded-full">
+                <img src="${item.profile_image}" alt="" class="rounded-full">
+            </figure>
+            <div>
+                <p class="font-bold text-[rgb(18,19,45)]">
+                    ${item.author.name}
+                </p>
+                <p class="text-[rgba(18,19,45,0.6)]">
+                    ${item.author.designation ? item.author.designation : 'Unknown'}
+                </p>
+            </div>
+        </div>
+    </div>
+        `
+        latestPostCards.appendChild(div);
+    })
+}
+
+latestPost();

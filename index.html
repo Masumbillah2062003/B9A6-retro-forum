@@ -31,7 +31,7 @@
                     <button class="lg:w-14 lg:h-14 w-10 h-10 border border-[rgba(3,7,18,0.1)] rounded-full bg-[3,7,18,0.03]"><i class="fa-solid fa-font-awesome"></i></button>
                 </div>
                 <div>
-                    <button class="lg:px-10 lg:py-4 px-5 py-2 border border-[rgba(3,7,18,0.1)] bg-[rgb(121,125,252)] text-white font-bold rounded-[50px]">Sign In</button>
+                    <button onclick="clickIdName()" class="lg:px-10 lg:py-4 px-5 py-2 border border-[rgba(3,7,18,0.1)] bg-[rgb(121,125,252)] text-white font-bold rounded-[50px]">Sign In</button>
                 </div>
             </div>
         </nav>
@@ -112,7 +112,35 @@
             </div>
         </section>
 
+        <section class="mt-24">
+            <div class="text-center">
+                <h1 class="text-4xl font-black text-[rgb(18,19,45)]">Latest Posts</h1>
+                <p class="text-lg text-[rgba(18,19,45,0.6)]">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+            </div>
+            <div id="latest-post-cards" class="mt-12 flex justify-between">
+                <!-- code in JavaScript -->
+            </div>
+        </section>
     </main>
+
+    <footer class="container mx-auto mt-[100px] pt-[100px] bg-[linear-gradient(180.00deg,rgba(18,19,45,0.05),rgba(18,19,45,0)100%)]">
+        <div class="w-[1170px] h-[289px] mx-auto text-center space-y-5">
+            <h1 class="text-4xl font-black text-[rgb(18,19,45)]">
+                ReTro
+            </h1>
+            <p class="text-[rgba(18,19,45,0.7)]">
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots <br> in a piece of classical Latin literature from 45 BC
+            </p>
+            <div class="flex flex-row gap-10 justify-center items-center">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <hr class="mt-12 border-[rgba(48,50,94,0.1)]">
+            <p class="mt-12 text-[rgba(18,19,45,0.5)]">2017, All Rights Reserved.</p>
+        </div>
+    </footer>
 
     <!-- script -->
     <script src="script/retro.js"></script>
