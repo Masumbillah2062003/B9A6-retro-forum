@@ -10,8 +10,8 @@ const discussSectionCard = async(idName) => {
 
         const div = document.createElement('div');
         div.innerHTML = `
-        <div class="bg-[rgb(243,243,245)] p-10 w-full h-[270px] flex gap-6 rounded-3xl border-2 border-[rgb(121,125,252)]">
-        <div class="w-[90px] h-[80px] rounded-2xl bg-black relative">
+        <div class="bg-[rgb(243,243,245)] lg:p-10 p-5 w-full lg:h-[270px] flex lg:flex-row flex-col gap-6 rounded-3xl border-2 border-[rgb(121,125,252)] text-center lg:text-start">
+        <div class="lg:w-[90px] lg:h-[80px] w-[50px] mx-auto rounded-2xl bg-black relative">
             <img src="${item.image}" alt="" class="rounded-2xl">
             ${item.isActive == true ? '<p id="warnning-color" class="w-5 h-5 bg-[rgb(16,185,129)] rounded-full absolute -top-2 -right-2 border-2 border-white"></p>' : '<p id="warnning-color" class="w-5 h-5  rounded-full bg-[red] absolute -top-2 -right-2 border-2 border-white"></p>'}
         </div>
@@ -28,7 +28,7 @@ const discussSectionCard = async(idName) => {
             </div>
             <hr class="border border-dashed border-[rgba(18,19,45,0.25)] my-6">
             <div class="flex justify-between text-[rgba(18,19,45,0.6)]">
-                <div class="flex gap-7">
+                <div class="flex lg:gap-7 gap-3">
                     <p><span><i class="fa-regular fa-message"></i></span> <span>${item.comment_count}</span></p>
                     <p><span><i class="fa-regular fa-eye"></i></span> <span>${item.view_count}</span></p>
                     <p><i class="fa-regular fa-clock"></i></span> <span>${item.posted_time} min</span></p>
@@ -51,7 +51,7 @@ const messageButton = (title, view_count) => {
     const cardMessage = document.getElementById('card-message')
     const div2 = document.createElement('div');
     div2.innerHTML = `
-    <div class="bg-white rounded-2xl w-[326px] h-[82px] flex justify-between items-center p-4 ">
+    <div class="bg-white rounded-2xl lg:w-[326px] h-[82px] flex justify-between items-center p-4 ">
         <p class="text-base font-semibold">${title}</p>
         <p class="text-[rgba(18,19,45,0.6)]"><span><i class="fa-regular fa-eye"></i></span> <span>${view_count}</span></p>
     </div>
