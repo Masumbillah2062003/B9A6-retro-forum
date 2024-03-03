@@ -1,3 +1,5 @@
+
+
 const discussSectionCard = async() => {
     const res = await fetch("https://openapi.programming-hero.com/api/retro-forum/posts")
     const data = await res.json();
@@ -15,7 +17,7 @@ const discussSectionCard = async() => {
         </div>
         <div class="w-full">
             <div class="text-sm font-medium text-[rgba(18,19,45,0.8)] flex gap-5">
-                <p># ${item.category}</p>
+                <p># <span>${item.category}</span></p>
                 <p>Author : ${item.author.name}</p>
             </div>
             <div class="my-4">
@@ -40,7 +42,7 @@ const discussSectionCard = async() => {
     `;
 
     mainSectionSectiondiv.appendChild(div);
-
+    
     });
 }
 
@@ -61,9 +63,22 @@ const messageButton = (title, view_count) => {
     const count = Number(massageCount.innerText)
     const countAdd = count + 1;
     massageCount.innerText = countAdd;
+
 }
 
 discussSectionCard();
+
+
+// const clickIdName = () => {
+//     const input = document.getElementById('input-field').value.toLowerCase();
+//     const categoryName = document.getElementById('category-name').innerText.toLowerCase();
+//     if(input == categoryName){
+//         console.log('masum')
+//     }
+//     else{
+//         console.log('false')
+//     }
+// }
 
 
 const latestPost = async() => {
