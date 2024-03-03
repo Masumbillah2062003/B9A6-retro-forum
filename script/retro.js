@@ -1,13 +1,13 @@
 
 
-const discussSectionCard = async() => {
-    const res = await fetch("https://openapi.programming-hero.com/api/retro-forum/posts")
+const discussSectionCard = async(idName) => {
+    const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${idName}`)
     const data = await res.json();
 
     const mainSectionSectiondiv = document.getElementById('main-second-section-div');
+    mainSectionSectiondiv.innerText = '';
     data.posts.forEach(item => {
 
-        
         const div = document.createElement('div');
         div.innerHTML = `
         <div class="bg-[rgb(243,243,245)] p-10 w-full h-[270px] flex gap-6 rounded-3xl border-2 border-[rgb(121,125,252)]">
@@ -33,7 +33,7 @@ const discussSectionCard = async() => {
                     <p><span><i class="fa-regular fa-eye"></i></span> <span>${item.view_count}</span></p>
                     <p><i class="fa-regular fa-clock"></i></span> <span>${item.posted_time} min</span></p>
                 </div>
-                <button onclick="messageButton('${item.title}', '${item.view_count}')" class="w-[28px] h-[28px] rounded-full bg-[rgb(16,185,129)] flex items-center justify-center">
+                <button onclick="messageButton('${item.title.replace("'", " ")}',${item.view_count})" class="w-[28px] h-[28px] rounded-full bg-[rgb(16,185,129)] flex items-center justify-center">
                     <i class="fa-solid fa-envelope text-white"></i>
                 </button>
             </div>
@@ -45,7 +45,6 @@ const discussSectionCard = async() => {
     
     });
 }
-
 
 
 const messageButton = (title, view_count) => {
@@ -66,19 +65,32 @@ const messageButton = (title, view_count) => {
 
 }
 
-discussSectionCard();
 
 
-// const clickIdName = () => {
-//     const input = document.getElementById('input-field').value.toLowerCase();
-//     const categoryName = document.getElementById('category-name').innerText.toLowerCase();
-//     if(input == categoryName){
-//         console.log('masum')
-//     }
-//     else{
-//         console.log('false')
-//     }
-// }
+discussSectionCard('comedy');
+
+
+
+
+const clickIdName = () => {
+    const input = document.getElementById('input-field').value.toLowerCase();
+    if(input == 'comedy' || input == 'coding' || input == 'music'){
+        const loadingSection = document.getElementById('loading-section');
+        loadingSection.classList.remove('hidden')
+        setTimeout(() => {
+            discussSectionCard(input);
+            loadingSection.classList.add('hidden')
+        }, 2000);
+    }
+    else{
+        discussSectionCard(input);
+    }
+}
+
+
+
+
+
 
 
 const latestPost = async() => {

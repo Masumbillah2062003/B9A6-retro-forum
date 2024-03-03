@@ -12,7 +12,7 @@
     <!--Raw CSS style-->
     <link rel="stylesheet" href="style/style.css">
 
-    <!-- fontawasome -->
+    <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/6c13a282a2.js" crossorigin="anonymous"></script>
 
 </head>
@@ -26,10 +26,10 @@
                 
             <div class="flex gap-6 flex-col lg:flex-row items-center justify-start">
                 <div class="flex gap-6 ">
-                    <button class="lg:w-14 lg:h-14 w-10 h-10 border border-[rgba(3,7,18,0.1)] rounded-full bg-[3,7,18,0.03]"><i class="fa-solid fa-house"></i></button>
-                    <button class="lg:w-14 lg:h-14 w-10 h-10 border border-[rgba(3,7,18,0.1)] rounded-full bg-[3,7,18,0.03]"><i class="fa-solid fa-pen"></i></button>
-                    <button class="lg:w-14 lg:h-14 w-10 h-10 border border-[rgba(3,7,18,0.1)] rounded-full bg-[3,7,18,0.03]"><i class="fa-solid fa-user-plus"></i></button>
-                    <button class="lg:w-14 lg:h-14 w-10 h-10 border border-[rgba(3,7,18,0.1)] rounded-full bg-[3,7,18,0.03]"><i class="fa-solid fa-font-awesome"></i></button>
+                    <button class="lg:w-14 lg:h-14 w-10 h-10 border border-[rgba(3,7,18,0.1)] rounded-full bg-[3,7,18,0.03]" title="home"><i class="fa-solid fa-house"></i></button>
+                    <button title="Edit" class="lg:w-14 lg:h-14 w-10 h-10 border border-[rgba(3,7,18,0.1)] rounded-full bg-[3,7,18,0.03]"><i class="fa-solid fa-pen"></i></button>
+                    <button title="Add" class="lg:w-14 lg:h-14 w-10 h-10 border border-[rgba(3,7,18,0.1)] rounded-full bg-[3,7,18,0.03]"><i class="fa-solid fa-user-plus"></i></button>
+                    <button title="awesome" class="lg:w-14 lg:h-14 w-10 h-10 border border-[rgba(3,7,18,0.1)] rounded-full bg-[3,7,18,0.03]"><i class="fa-solid fa-font-awesome"></i></button>
                 </div>
                 <div>
                     <button  class="lg:px-10 lg:py-4 px-5 py-2 border border-[rgba(3,7,18,0.1)] bg-[rgb(121,125,252)] text-white font-bold rounded-[50px]">Sign In</button>
@@ -38,15 +38,15 @@
         </nav>
 
         <!-- banner section -->
-        <div class="banner mt-12">
+        <div class="banner lg:mt-12 mt-7">
             <div class="lg:w-[1170px] mx-auto lg:h-[550px] bg-[rgb(18,19,45)] bg-[url(images/bgbanner.png)] bg-no-repeat rounded-3xl bg-bottom">
-                <div class="text-white flex justify-between items-center px-28 py-32">
+                <div class="text-white lg:flex lg:justify-between lg:items-center lg:px-28 lg:py-32">
                     <div>
                         <h1 class="font-black text-6xl">Welcome to the <br> <span class="text-[rgb(121,125,252)]">ReTro</span> Forum</h1>
                         <p class="text-[rgba(255,255,255,0.8)] text-xl font-medium mt-5 mb-8">Share your favorite opinion and win and wp <br> forum coffee mug!</p>
                         <div class="bg-white w-[400px] flex p-1 rounded-[50px]">
                             <input id="input-field" class="bg-transparent px-5 w-full outline-none text-[rgba(3,7,18,0.5)]" type="text" placeholder="Search here anything"> 
-                            <button class="bg-[rgb(121,125,252)] px-7 py-4 font-bold rounded-[46px]">Search</button>
+                            <button onclick="clickIdName()" class="bg-[rgb(121,125,252)] px-7 py-4 font-bold rounded-[46px]">Search</button>
                         </div>
                     </div>
                     <div class="bg-white rounded-3xl text-black w-96 h-72 p-12">
@@ -80,6 +80,13 @@
             <h1 class="text-4xl font-black text-[rgb(18,19,45)]">Let's Discuss</h1>
             <p class="text-lg text-[rgba(18,19,45,0.6)]">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
         </section>
+
+        <section id="loading-section" class="hidden">
+            <div class="text-center">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
+        </section>
+
         <section class="mt-12 flex gap-6">
             <div id="main-second-section-div" class="flex flex-col gap-6 w-full">
                 <!-- thats div code in javaScript  -->
