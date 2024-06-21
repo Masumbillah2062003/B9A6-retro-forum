@@ -1,6 +1,6 @@
 
 
-const discussSectionCard = async(idName) => {
+const discussSectionCard = async (idName) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${idName}`)
     const data = await res.json();
 
@@ -41,8 +41,8 @@ const discussSectionCard = async(idName) => {
     </div>
     `;
 
-    mainSectionSectiondiv.appendChild(div);
-    
+        mainSectionSectiondiv.appendChild(div);
+
     });
 }
 
@@ -74,7 +74,7 @@ discussSectionCard('');
 
 const clickIdName = () => {
     const input = document.getElementById('input-field').value.toLowerCase();
-    if(input == 'comedy' || input == 'coding' || input == 'music'){
+    if (input == 'comedy' || input == 'coding' || input == 'music') {
         const loadingSection = document.getElementById('loading-section');
         loadingSection.classList.remove('hidden')
         setTimeout(() => {
@@ -82,7 +82,7 @@ const clickIdName = () => {
             loadingSection.classList.add('hidden')
         }, 2000);
     }
-    else{
+    else {
         discussSectionCard(input);
     }
 }
@@ -93,7 +93,7 @@ const clickIdName = () => {
 
 
 
-const latestPost = async() => {
+const latestPost = async () => {
     const res = await fetch("https://openapi.programming-hero.com/api/retro-forum/latest-posts");
     const data = await res.json();
 
